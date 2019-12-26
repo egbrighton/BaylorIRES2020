@@ -1,0 +1,246 @@
+---
+root(Type=CompilationUnit): 
+    packageDeclaration(Type=PackageDeclaration): 
+        name(Type=Name): 
+            identifier: "FindFileTest"
+    imports: 
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "File"
+                qualifier(Type=Name): 
+                    identifier: "io"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Assert"
+                qualifier(Type=Name): 
+                    identifier: "junit"
+                    qualifier(Type=Name): 
+                        identifier: "org"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Test"
+                qualifier(Type=Name): 
+                    identifier: "junit"
+                    qualifier(Type=Name): 
+                        identifier: "org"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "FindJavaFiles"
+                qualifier(Type=Name): 
+                    identifier: "FindFiles"
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "FindFilesTest2"
+            members: 
+                - member(Type=FieldDeclaration): 
+                    variables: 
+                        - variable(Type=VariableDeclarator): 
+                            name(Type=SimpleName): 
+                                identifier: "find"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "FindJavaFiles"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "find"
+                                    value(Type=ObjectCreationExpr): 
+                                        type(Type=ClassOrInterfaceType): 
+                                            name(Type=SimpleName): 
+                                                identifier: "FindJavaFiles"
+                                        arguments: 
+                                            - argument(Type=ObjectCreationExpr): 
+                                                type(Type=ClassOrInterfaceType): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "File"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "src/test/resources/JavaTestFiles/RegexTest"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "assertEquals"
+                                    scope(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "Assert"
+                                    arguments: 
+                                        - argument(Type=MethodCallExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "getFileCount"
+                                            scope(Type=NameExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "find"
+                                        - argument(Type=IntegerLiteralExpr): 
+                                            value: "1"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "testRegex"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    annotations: 
+                        - annotation(Type=MarkerAnnotationExpr): 
+                            name(Type=Name): 
+                                identifier: "Test"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "find"
+                                    value(Type=ObjectCreationExpr): 
+                                        type(Type=ClassOrInterfaceType): 
+                                            name(Type=SimpleName): 
+                                                identifier: "FindJavaFiles"
+                                        arguments: 
+                                            - argument(Type=ObjectCreationExpr): 
+                                                type(Type=ClassOrInterfaceType): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "File"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "src/test/resources/JavaTestFiles/DirectoryTest"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "assertEquals"
+                                    scope(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "Assert"
+                                    arguments: 
+                                        - argument(Type=MethodCallExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "getFileCount"
+                                            scope(Type=NameExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "find"
+                                        - argument(Type=IntegerLiteralExpr): 
+                                            value: "1"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "testDir"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    annotations: 
+                        - annotation(Type=MarkerAnnotationExpr): 
+                            name(Type=Name): 
+                                identifier: "Test"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "find"
+                                    value(Type=ObjectCreationExpr): 
+                                        type(Type=ClassOrInterfaceType): 
+                                            name(Type=SimpleName): 
+                                                identifier: "FindJavaFiles"
+                                        arguments: 
+                                            - argument(Type=ObjectCreationExpr): 
+                                                type(Type=ClassOrInterfaceType): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "File"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "src/test/resources/JavaTestFiles/NestedDirectoryTest"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "assertEquals"
+                                    scope(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "Assert"
+                                    arguments: 
+                                        - argument(Type=MethodCallExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "getFileCount"
+                                            scope(Type=NameExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "find"
+                                        - argument(Type=IntegerLiteralExpr): 
+                                            value: "2"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "testNestedDir"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    annotations: 
+                        - annotation(Type=MarkerAnnotationExpr): 
+                            name(Type=Name): 
+                                identifier: "Test"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "find"
+                                    value(Type=ObjectCreationExpr): 
+                                        type(Type=ClassOrInterfaceType): 
+                                            name(Type=SimpleName): 
+                                                identifier: "FindJavaFiles"
+                                        arguments: 
+                                            - argument(Type=ObjectCreationExpr): 
+                                                type(Type=ClassOrInterfaceType): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "File"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "src/test/resources/JavaTestFiles/ComplexTest"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "assertEquals"
+                                    scope(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "Assert"
+                                    arguments: 
+                                        - argument(Type=MethodCallExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "getFileCount"
+                                            scope(Type=NameExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "find"
+                                        - argument(Type=IntegerLiteralExpr): 
+                                            value: "5"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "testComplexDir"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    annotations: 
+                        - annotation(Type=MarkerAnnotationExpr): 
+                            name(Type=Name): 
+                                identifier: "Test"
+            modifiers: 
+                - modifier(Type=Modifier): 
+                    keyword: "PUBLIC"
+...

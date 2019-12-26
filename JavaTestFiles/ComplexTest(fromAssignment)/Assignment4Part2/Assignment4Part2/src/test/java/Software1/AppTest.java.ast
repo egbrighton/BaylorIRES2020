@@ -1,0 +1,60 @@
+---
+root(Type=CompilationUnit): 
+    packageDeclaration(Type=PackageDeclaration): 
+        name(Type=Name): 
+            identifier: "Software1"
+    imports: 
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "true"
+            name(Type=Name): 
+                identifier: "assertTrue"
+                qualifier(Type=Name): 
+                    identifier: "Assert"
+                    qualifier(Type=Name): 
+                        identifier: "junit"
+                        qualifier(Type=Name): 
+                            identifier: "org"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Test"
+                qualifier(Type=Name): 
+                    identifier: "junit"
+                    qualifier(Type=Name): 
+                        identifier: "org"
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "AppTest"
+            comment(Type=JavadocComment): 
+                content: "\r\n * Unit test for simple App.\r\n "
+            members: 
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "assertTrue"
+                                    arguments: 
+                                        - argument(Type=BooleanLiteralExpr): 
+                                            value: "true"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "shouldAnswerWithTrue"
+                    comment(Type=JavadocComment): 
+                        content: "\r\n     * Rigorous Test :-)\r\n     "
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    annotations: 
+                        - annotation(Type=MarkerAnnotationExpr): 
+                            name(Type=Name): 
+                                identifier: "Test"
+            modifiers: 
+                - modifier(Type=Modifier): 
+                    keyword: "PUBLIC"
+...

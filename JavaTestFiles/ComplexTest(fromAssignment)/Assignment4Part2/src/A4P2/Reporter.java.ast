@@ -1,0 +1,1408 @@
+---
+root(Type=CompilationUnit): 
+    packageDeclaration(Type=PackageDeclaration): 
+        name(Type=Name): 
+            identifier: "A4P2"
+    comment(Type=BlockComment): 
+        content: "Elizabeth Brighton\r\n *Software Engineering 1\r\n *Assignment 4 Part 2\r\n *due 9/28/2019\r\n "
+    imports: 
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "File"
+                qualifier(Type=Name): 
+                    identifier: "io"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "FileNotFoundException"
+                qualifier(Type=Name): 
+                    identifier: "io"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "ArrayList"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Collections"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Comparator"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "HashMap"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "LinkedHashMap"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "List"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Map"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Scanner"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "TreeMap"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Collectors"
+                qualifier(Type=Name): 
+                    identifier: "stream"
+                    qualifier(Type=Name): 
+                        identifier: "util"
+                        qualifier(Type=Name): 
+                            identifier: "java"
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "Reporter"
+            members: 
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=IfStmt): 
+                                condition(Type=BinaryExpr): 
+                                    operator: "OR"
+                                    left(Type=BinaryExpr): 
+                                        operator: "EQUALS"
+                                        left(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "args"
+                                        right(Type=NullLiteralExpr): 
+                                    right(Type=BinaryExpr): 
+                                        operator: "NOT_EQUALS"
+                                        left(Type=FieldAccessExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "length"
+                                            scope(Type=NameExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "args"
+                                        right(Type=IntegerLiteralExpr): 
+                                            value: "2"
+                                thenStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "syntaxt is <file path> report type"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "exit"
+                                                scope(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=IntegerLiteralExpr): 
+                                                        value: "0"
+                                comment(Type=LineComment): 
+                                    content: "Check the args length"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            initializer(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "parseInt"
+                                                scope(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "Integer"
+                                                arguments: 
+                                                    - argument(Type=ArrayAccessExpr): 
+                                                        index(Type=IntegerLiteralExpr): 
+                                                            value: "1"
+                                                        name(Type=NameExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "args"
+                                            name(Type=SimpleName): 
+                                                identifier: "inputVal"
+                                            type(Type=PrimitiveType): 
+                                                type: "INT"
+                                comment(Type=LineComment): 
+                                    content: "parse the second value into an int"
+                            - statement(Type=IfStmt): 
+                                condition(Type=BinaryExpr): 
+                                    operator: "OR"
+                                    left(Type=BinaryExpr): 
+                                        operator: "GREATER"
+                                        left(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "inputVal"
+                                        right(Type=IntegerLiteralExpr): 
+                                            value: "3"
+                                    right(Type=BinaryExpr): 
+                                        operator: "LESS"
+                                        left(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "inputVal"
+                                        right(Type=IntegerLiteralExpr): 
+                                            value: "1"
+                                thenStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "syntaxt is <file path> report type"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "exit"
+                                                scope(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=IntegerLiteralExpr): 
+                                                        value: "0"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            initializer(Type=ObjectCreationExpr): 
+                                                type(Type=ClassOrInterfaceType): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "Scanner"
+                                                arguments: 
+                                                    - argument(Type=ObjectCreationExpr): 
+                                                        type(Type=ClassOrInterfaceType): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "File"
+                                                        arguments: 
+                                                            - argument(Type=ArrayAccessExpr): 
+                                                                index(Type=IntegerLiteralExpr): 
+                                                                    value: "0"
+                                                                name(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "args"
+                                            name(Type=SimpleName): 
+                                                identifier: "scanner"
+                                            type(Type=ClassOrInterfaceType): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "Scanner"
+                                comment(Type=LineComment): 
+                                    content: "create a scanner to read in the file"
+                            - statement(Type=SwitchStmt): 
+                                selector(Type=NameExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "inputVal"
+                                entries: 
+                                    - entrie(Type=SwitchEntry): 
+                                        type: "STATEMENT_GROUP"
+                                        labels: 
+                                            - label(Type=IntegerLiteralExpr): 
+                                                value: "1"
+                                        statements: 
+                                            - statement(Type=BlockStmt): 
+                                                statements: 
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=ObjectCreationExpr): 
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "ArrayList"
+                                                                            typeArguments: 
+                                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "case1"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "List"
+                                                                        typeArguments: 
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "String"
+                                                        comment(Type=LineComment): 
+                                                            content: "for case 1 put everything into a list"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=IntegerLiteralExpr): 
+                                                                        value: "0"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "count"
+                                                                    type(Type=PrimitiveType): 
+                                                                        type: "INT"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=IntegerLiteralExpr): 
+                                                                        value: "0"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "lengthOfDescription"
+                                                                    type(Type=PrimitiveType): 
+                                                                        type: "INT"
+                                                        comment(Type=LineComment): 
+                                                            content: "Get rid of the descriptions on the top of the csv file"
+                                                    - statement(Type=IfStmt): 
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "hasNextLine"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "scanner"
+                                                        thenStmt(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "nextLine"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "scanner"
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "s"
+                                                                                type(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "split"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "s"
+                                                                                    arguments: 
+                                                                                        - argument(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "sp"
+                                                                                type(Type=ArrayType): 
+                                                                                    origin: "TYPE"
+                                                                                    componentType(Type=ClassOrInterfaceType): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "String"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=AssignExpr): 
+                                                                        operator: "ASSIGN"
+                                                                        target(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "lengthOfDescription"
+                                                                        value(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "length"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "sp"
+                                                    - statement(Type=WhileStmt): 
+                                                        body(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "toLowerCase"
+                                                                                    scope(Type=MethodCallExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "nextLine"
+                                                                                        scope(Type=NameExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "scanner"
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "line"
+                                                                                type(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "Make them lower case"
+                                                                - statement(Type=IfStmt): 
+                                                                    condition(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "contains"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "line"
+                                                                        arguments: 
+                                                                            - argument(Type=StringLiteralExpr): 
+                                                                                value: "tech"
+                                                                    thenStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ContinueStmt): 
+                                                                                comment(Type=LineComment): 
+                                                                                    content: "count++;"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "don't add it to the list"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "split"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "line"
+                                                                                    arguments: 
+                                                                                        - argument(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "input"
+                                                                                type(Type=ArrayType): 
+                                                                                    origin: "TYPE"
+                                                                                    componentType(Type=ClassOrInterfaceType): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "String"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "Split the input"
+                                                                - statement(Type=IfStmt): 
+                                                                    condition(Type=BinaryExpr): 
+                                                                        operator: "NOT_EQUALS"
+                                                                        left(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "length"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "input"
+                                                                        right(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "lengthOfDescription"
+                                                                    thenStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ExpressionStmt): 
+                                                                                expression(Type=UnaryExpr): 
+                                                                                    operator: "POSTFIX_INCREMENT"
+                                                                                    expression(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "count"
+                                                                                comment(Type=LineComment): 
+                                                                                    content: "System.out.println(\"line not properly set up\");"
+                                                                            - statement(Type=ContinueStmt): 
+                                                                    comment(Type=LineComment): 
+                                                                        content: "then the description length"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=AssignExpr): 
+                                                                        operator: "ASSIGN"
+                                                                        target(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "line"
+                                                                        value(Type=BinaryExpr): 
+                                                                            operator: "PLUS"
+                                                                            left(Type=BinaryExpr): 
+                                                                                operator: "PLUS"
+                                                                                left(Type=BinaryExpr): 
+                                                                                    operator: "PLUS"
+                                                                                    left(Type=BinaryExpr): 
+                                                                                        operator: "PLUS"
+                                                                                        left(Type=BinaryExpr): 
+                                                                                            operator: "PLUS"
+                                                                                            left(Type=BinaryExpr): 
+                                                                                                operator: "PLUS"
+                                                                                                left(Type=ArrayAccessExpr): 
+                                                                                                    index(Type=IntegerLiteralExpr): 
+                                                                                                        value: "4"
+                                                                                                    name(Type=NameExpr): 
+                                                                                                        name(Type=SimpleName): 
+                                                                                                            identifier: "input"
+                                                                                                right(Type=StringLiteralExpr): 
+                                                                                                    value: ","
+                                                                                            right(Type=ArrayAccessExpr): 
+                                                                                                index(Type=IntegerLiteralExpr): 
+                                                                                                    value: "3"
+                                                                                                name(Type=NameExpr): 
+                                                                                                    name(Type=SimpleName): 
+                                                                                                        identifier: "input"
+                                                                                        right(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                    right(Type=ArrayAccessExpr): 
+                                                                                        index(Type=IntegerLiteralExpr): 
+                                                                                            value: "5"
+                                                                                        name(Type=NameExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "input"
+                                                                                right(Type=StringLiteralExpr): 
+                                                                                    value: ","
+                                                                            right(Type=ArrayAccessExpr): 
+                                                                                index(Type=IntegerLiteralExpr): 
+                                                                                    value: "6"
+                                                                                name(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "input"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "sorted by city"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "add"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "case1"
+                                                                        arguments: 
+                                                                            - argument(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "line"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "and add it to the list"
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "hasNextLine"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "scanner"
+                                                        comment(Type=LineComment): 
+                                                            content: "Scan in the values"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "sort"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "Collections"
+                                                            arguments: 
+                                                                - argument(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "case1"
+                                                        comment(Type=LineComment): 
+                                                            content: "sort the list"
+                                                    - statement(Type=ForEachStmt): 
+                                                        body(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "split"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "s"
+                                                                                    arguments: 
+                                                                                        - argument(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "current"
+                                                                                type(Type=ArrayType): 
+                                                                                    origin: "TYPE"
+                                                                                    componentType(Type=ClassOrInterfaceType): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "String"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "println"
+                                                                        scope(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "out"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "System"
+                                                                        arguments: 
+                                                                            - argument(Type=BinaryExpr): 
+                                                                                operator: "PLUS"
+                                                                                left(Type=BinaryExpr): 
+                                                                                    operator: "PLUS"
+                                                                                    left(Type=BinaryExpr): 
+                                                                                        operator: "PLUS"
+                                                                                        left(Type=BinaryExpr): 
+                                                                                            operator: "PLUS"
+                                                                                            left(Type=BinaryExpr): 
+                                                                                                operator: "PLUS"
+                                                                                                left(Type=BinaryExpr): 
+                                                                                                    operator: "PLUS"
+                                                                                                    left(Type=ArrayAccessExpr): 
+                                                                                                        index(Type=IntegerLiteralExpr): 
+                                                                                                            value: "1"
+                                                                                                        name(Type=NameExpr): 
+                                                                                                            name(Type=SimpleName): 
+                                                                                                                identifier: "current"
+                                                                                                    right(Type=StringLiteralExpr): 
+                                                                                                        value: ", "
+                                                                                                right(Type=ArrayAccessExpr): 
+                                                                                                    index(Type=IntegerLiteralExpr): 
+                                                                                                        value: "0"
+                                                                                                    name(Type=NameExpr): 
+                                                                                                        name(Type=SimpleName): 
+                                                                                                            identifier: "current"
+                                                                                            right(Type=StringLiteralExpr): 
+                                                                                                value: ", "
+                                                                                        right(Type=ArrayAccessExpr): 
+                                                                                            index(Type=IntegerLiteralExpr): 
+                                                                                                value: "2"
+                                                                                            name(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "current"
+                                                                                    right(Type=StringLiteralExpr): 
+                                                                                        value: ", "
+                                                                                right(Type=ArrayAccessExpr): 
+                                                                                    index(Type=IntegerLiteralExpr): 
+                                                                                        value: "3"
+                                                                                    name(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "current"
+                                                        iterable(Type=NameExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "case1"
+                                                        variable(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "s"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "String"
+                                                        comment(Type=LineComment): 
+                                                            content: "(The order given in the description - Institution name, city, state abbreviation and URL)"
+                                                    - statement(Type=BreakStmt): 
+                                                        comment(Type=LineComment): 
+                                                            content: "System.out.println(lengthOfDescription);"
+                                    - entrie(Type=SwitchEntry): 
+                                        type: "STATEMENT_GROUP"
+                                        labels: 
+                                            - label(Type=IntegerLiteralExpr): 
+                                                value: "2"
+                                        statements: 
+                                            - statement(Type=BlockStmt): 
+                                                statements: 
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=ObjectCreationExpr): 
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "HashMap"
+                                                                            typeArguments: 
+                                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "Integer"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "case2"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "Map"
+                                                                        typeArguments: 
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "String"
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "Integer"
+                                                        comment(Type=LineComment): 
+                                                            content: "of institutions in each city"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=IntegerLiteralExpr): 
+                                                                        value: "0"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "lengthOfDescription"
+                                                                    type(Type=PrimitiveType): 
+                                                                        type: "INT"
+                                                        comment(Type=LineComment): 
+                                                            content: "And find the length of the first line"
+                                                    - statement(Type=IfStmt): 
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "hasNextLine"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "scanner"
+                                                        thenStmt(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "nextLine"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "scanner"
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "s"
+                                                                                type(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "split"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "s"
+                                                                                    arguments: 
+                                                                                        - argument(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "sp"
+                                                                                type(Type=ArrayType): 
+                                                                                    origin: "TYPE"
+                                                                                    componentType(Type=ClassOrInterfaceType): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "String"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=AssignExpr): 
+                                                                        operator: "ASSIGN"
+                                                                        target(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "lengthOfDescription"
+                                                                        value(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "length"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "sp"
+                                                    - statement(Type=WhileStmt): 
+                                                        body(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "toLowerCase"
+                                                                                    scope(Type=MethodCallExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "nextLine"
+                                                                                        scope(Type=NameExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "scanner"
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "line"
+                                                                                type(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "Make them lower case"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "split"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "line"
+                                                                                    arguments: 
+                                                                                        - argument(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "input"
+                                                                                type(Type=ArrayType): 
+                                                                                    origin: "TYPE"
+                                                                                    componentType(Type=ClassOrInterfaceType): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "String"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "Split the input"
+                                                                - statement(Type=IfStmt): 
+                                                                    condition(Type=BinaryExpr): 
+                                                                        operator: "NOT_EQUALS"
+                                                                        left(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "length"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "input"
+                                                                        right(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "lengthOfDescription"
+                                                                    thenStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ContinueStmt): 
+                                                                                comment(Type=LineComment): 
+                                                                                    content: "System.out.println(\"line not properly set up\");"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "then the description length"
+                                                                - statement(Type=IfStmt): 
+                                                                    condition(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "containsKey"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "case2"
+                                                                        arguments: 
+                                                                            - argument(Type=ArrayAccessExpr): 
+                                                                                index(Type=IntegerLiteralExpr): 
+                                                                                    value: "4"
+                                                                                name(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "input"
+                                                                    elseStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ExpressionStmt): 
+                                                                                expression(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "put"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "case2"
+                                                                                    arguments: 
+                                                                                        - argument(Type=ArrayAccessExpr): 
+                                                                                            index(Type=IntegerLiteralExpr): 
+                                                                                                value: "4"
+                                                                                            name(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "input"
+                                                                                        - argument(Type=IntegerLiteralExpr): 
+                                                                                            value: "1"
+                                                                    thenStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ExpressionStmt): 
+                                                                                expression(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "put"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "case2"
+                                                                                    arguments: 
+                                                                                        - argument(Type=ArrayAccessExpr): 
+                                                                                            index(Type=IntegerLiteralExpr): 
+                                                                                                value: "4"
+                                                                                            name(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "input"
+                                                                                        - argument(Type=EnclosedExpr): 
+                                                                                            inner(Type=BinaryExpr): 
+                                                                                                operator: "PLUS"
+                                                                                                left(Type=MethodCallExpr): 
+                                                                                                    name(Type=SimpleName): 
+                                                                                                        identifier: "get"
+                                                                                                    scope(Type=NameExpr): 
+                                                                                                        name(Type=SimpleName): 
+                                                                                                            identifier: "case2"
+                                                                                                    arguments: 
+                                                                                                        - argument(Type=ArrayAccessExpr): 
+                                                                                                            index(Type=IntegerLiteralExpr): 
+                                                                                                                value: "4"
+                                                                                                            name(Type=NameExpr): 
+                                                                                                                name(Type=SimpleName): 
+                                                                                                                    identifier: "input"
+                                                                                                right(Type=IntegerLiteralExpr): 
+                                                                                                    value: "1"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "1 to it. Otherwise initialize it to a value of 1"
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "hasNextLine"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "scanner"
+                                                        comment(Type=LineComment): 
+                                                            content: "Scan in the values"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=ObjectCreationExpr): 
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "TreeMap"
+                                                                            typeArguments: 
+                                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "Integer"
+                                                                        arguments: 
+                                                                            - argument(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "case2"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "case2Sorted"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "Map"
+                                                                        typeArguments: 
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "String"
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "Integer"
+                                                        comment(Type=LineComment): 
+                                                            content: "by the keys"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "forEach"
+                                                            scope(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "stream"
+                                                                scope(Type=MethodCallExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "entrySet"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "case2Sorted"
+                                                            arguments: 
+                                                                - argument(Type=LambdaExpr): 
+                                                                    isEnclosingParameters: "false"
+                                                                    body(Type=ExpressionStmt): 
+                                                                        expression(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "println"
+                                                                            scope(Type=FieldAccessExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "out"
+                                                                                scope(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "System"
+                                                                            arguments: 
+                                                                                - argument(Type=BinaryExpr): 
+                                                                                    operator: "PLUS"
+                                                                                    left(Type=BinaryExpr): 
+                                                                                        operator: "PLUS"
+                                                                                        left(Type=MethodCallExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "getKey"
+                                                                                            scope(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "m"
+                                                                                        right(Type=StringLiteralExpr): 
+                                                                                            value: ", "
+                                                                                    right(Type=MethodCallExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "getValue"
+                                                                                        scope(Type=NameExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "m"
+                                                                    parameters: 
+                                                                        - parameter(Type=Parameter): 
+                                                                            isVarArgs: "false"
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "m"
+                                                                            type(Type=UnknownType): 
+                                                        comment(Type=LineComment): 
+                                                            content: "Print out the results"
+                                                    - statement(Type=BreakStmt): 
+                                    - entrie(Type=SwitchEntry): 
+                                        type: "STATEMENT_GROUP"
+                                        labels: 
+                                            - label(Type=IntegerLiteralExpr): 
+                                                value: "3"
+                                        statements: 
+                                            - statement(Type=BlockStmt): 
+                                                statements: 
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=ObjectCreationExpr): 
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "HashMap"
+                                                                            typeArguments: 
+                                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "Integer"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "case3"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "Map"
+                                                                        typeArguments: 
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "String"
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "Integer"
+                                                        comment(Type=LineComment): 
+                                                            content: "of institutions in each state"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=IntegerLiteralExpr): 
+                                                                        value: "0"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "lengthOfDescription"
+                                                                    type(Type=PrimitiveType): 
+                                                                        type: "INT"
+                                                        comment(Type=LineComment): 
+                                                            content: "And find the length of the first line"
+                                                    - statement(Type=IfStmt): 
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "hasNextLine"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "scanner"
+                                                        thenStmt(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "nextLine"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "scanner"
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "s"
+                                                                                type(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "split"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "s"
+                                                                                    arguments: 
+                                                                                        - argument(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "sp"
+                                                                                type(Type=ArrayType): 
+                                                                                    origin: "TYPE"
+                                                                                    componentType(Type=ClassOrInterfaceType): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "String"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=AssignExpr): 
+                                                                        operator: "ASSIGN"
+                                                                        target(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "lengthOfDescription"
+                                                                        value(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "length"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "sp"
+                                                    - statement(Type=WhileStmt): 
+                                                        body(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "toLowerCase"
+                                                                                    scope(Type=MethodCallExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "nextLine"
+                                                                                        scope(Type=NameExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "scanner"
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "line"
+                                                                                type(Type=ClassOrInterfaceType): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "String"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "Make them lower case"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=VariableDeclarationExpr): 
+                                                                        variables: 
+                                                                            - variable(Type=VariableDeclarator): 
+                                                                                initializer(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "split"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "line"
+                                                                                    arguments: 
+                                                                                        - argument(Type=StringLiteralExpr): 
+                                                                                            value: ","
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "input"
+                                                                                type(Type=ArrayType): 
+                                                                                    origin: "TYPE"
+                                                                                    componentType(Type=ClassOrInterfaceType): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "String"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "Split the input"
+                                                                - statement(Type=IfStmt): 
+                                                                    condition(Type=BinaryExpr): 
+                                                                        operator: "NOT_EQUALS"
+                                                                        left(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "length"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "input"
+                                                                        right(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "lengthOfDescription"
+                                                                    thenStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ContinueStmt): 
+                                                                                comment(Type=LineComment): 
+                                                                                    content: "System.out.println(\"line not properly set up\");"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "then the description length"
+                                                                - statement(Type=IfStmt): 
+                                                                    condition(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "containsKey"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "case3"
+                                                                        arguments: 
+                                                                            - argument(Type=ArrayAccessExpr): 
+                                                                                index(Type=IntegerLiteralExpr): 
+                                                                                    value: "5"
+                                                                                name(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "input"
+                                                                    elseStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ExpressionStmt): 
+                                                                                expression(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "put"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "case3"
+                                                                                    arguments: 
+                                                                                        - argument(Type=ArrayAccessExpr): 
+                                                                                            index(Type=IntegerLiteralExpr): 
+                                                                                                value: "5"
+                                                                                            name(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "input"
+                                                                                        - argument(Type=IntegerLiteralExpr): 
+                                                                                            value: "1"
+                                                                    thenStmt(Type=BlockStmt): 
+                                                                        statements: 
+                                                                            - statement(Type=ExpressionStmt): 
+                                                                                expression(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "put"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "case3"
+                                                                                    arguments: 
+                                                                                        - argument(Type=ArrayAccessExpr): 
+                                                                                            index(Type=IntegerLiteralExpr): 
+                                                                                                value: "5"
+                                                                                            name(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "input"
+                                                                                        - argument(Type=EnclosedExpr): 
+                                                                                            inner(Type=BinaryExpr): 
+                                                                                                operator: "PLUS"
+                                                                                                left(Type=MethodCallExpr): 
+                                                                                                    name(Type=SimpleName): 
+                                                                                                        identifier: "get"
+                                                                                                    scope(Type=NameExpr): 
+                                                                                                        name(Type=SimpleName): 
+                                                                                                            identifier: "case3"
+                                                                                                    arguments: 
+                                                                                                        - argument(Type=ArrayAccessExpr): 
+                                                                                                            index(Type=IntegerLiteralExpr): 
+                                                                                                                value: "5"
+                                                                                                            name(Type=NameExpr): 
+                                                                                                                name(Type=SimpleName): 
+                                                                                                                    identifier: "input"
+                                                                                                right(Type=IntegerLiteralExpr): 
+                                                                                                    value: "1"
+                                                                    comment(Type=LineComment): 
+                                                                        content: "1 to it. Otherwise initialize it to a value of 1"
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "hasNextLine"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "scanner"
+                                                        comment(Type=LineComment): 
+                                                            content: "Scan in the values"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "collect"
+                                                                        scope(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "sorted"
+                                                                            scope(Type=MethodCallExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "stream"
+                                                                                scope(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "entrySet"
+                                                                                    scope(Type=NameExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "case3"
+                                                                            arguments: 
+                                                                                - argument(Type=MethodCallExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "comparingByValue"
+                                                                                    scope(Type=FieldAccessExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "Entry"
+                                                                                        scope(Type=NameExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "Map"
+                                                                                    arguments: 
+                                                                                        - argument(Type=MethodCallExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "reverseOrder"
+                                                                                            scope(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "Comparator"
+                                                                        arguments: 
+                                                                            - argument(Type=MethodCallExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "toMap"
+                                                                                scope(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "Collectors"
+                                                                                arguments: 
+                                                                                    - argument(Type=MethodReferenceExpr): 
+                                                                                        identifier: "getKey"
+                                                                                        scope(Type=TypeExpr): 
+                                                                                            type(Type=ClassOrInterfaceType): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "Entry"
+                                                                                                scope(Type=ClassOrInterfaceType): 
+                                                                                                    name(Type=SimpleName): 
+                                                                                                        identifier: "Map"
+                                                                                    - argument(Type=MethodReferenceExpr): 
+                                                                                        identifier: "getValue"
+                                                                                        scope(Type=TypeExpr): 
+                                                                                            type(Type=ClassOrInterfaceType): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "Entry"
+                                                                                                scope(Type=ClassOrInterfaceType): 
+                                                                                                    name(Type=SimpleName): 
+                                                                                                        identifier: "Map"
+                                                                                    - argument(Type=LambdaExpr): 
+                                                                                        isEnclosingParameters: "true"
+                                                                                        body(Type=ExpressionStmt): 
+                                                                                            expression(Type=NameExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "m2"
+                                                                                        parameters: 
+                                                                                            - parameter(Type=Parameter): 
+                                                                                                isVarArgs: "false"
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "m1"
+                                                                                                type(Type=UnknownType): 
+                                                                                            - parameter(Type=Parameter): 
+                                                                                                isVarArgs: "false"
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "m2"
+                                                                                                type(Type=UnknownType): 
+                                                                                    - argument(Type=MethodReferenceExpr): 
+                                                                                        identifier: "new"
+                                                                                        scope(Type=TypeExpr): 
+                                                                                            type(Type=ClassOrInterfaceType): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "LinkedHashMap"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "case3Sorted"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "Map"
+                                                                        typeArguments: 
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "String"
+                                                                            - typeArgument(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "Integer"
+                                                        comment(Type=LineComment): 
+                                                            content: "it has to collect it as a LinkedHashMap to keep the order intact"
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "forEach"
+                                                            scope(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "stream"
+                                                                scope(Type=MethodCallExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "entrySet"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "case3Sorted"
+                                                            arguments: 
+                                                                - argument(Type=LambdaExpr): 
+                                                                    isEnclosingParameters: "false"
+                                                                    body(Type=ExpressionStmt): 
+                                                                        expression(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "println"
+                                                                            scope(Type=FieldAccessExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "out"
+                                                                                scope(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "System"
+                                                                            arguments: 
+                                                                                - argument(Type=BinaryExpr): 
+                                                                                    operator: "PLUS"
+                                                                                    left(Type=BinaryExpr): 
+                                                                                        operator: "PLUS"
+                                                                                        left(Type=MethodCallExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "toUpperCase"
+                                                                                            scope(Type=MethodCallExpr): 
+                                                                                                name(Type=SimpleName): 
+                                                                                                    identifier: "getKey"
+                                                                                                scope(Type=NameExpr): 
+                                                                                                    name(Type=SimpleName): 
+                                                                                                        identifier: "m"
+                                                                                        right(Type=StringLiteralExpr): 
+                                                                                            value: ", "
+                                                                                    right(Type=MethodCallExpr): 
+                                                                                        name(Type=SimpleName): 
+                                                                                            identifier: "getValue"
+                                                                                        scope(Type=NameExpr): 
+                                                                                            name(Type=SimpleName): 
+                                                                                                identifier: "m"
+                                                                    parameters: 
+                                                                        - parameter(Type=Parameter): 
+                                                                            isVarArgs: "false"
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "m"
+                                                                            type(Type=UnknownType): 
+                                                        comment(Type=LineComment): 
+                                                            content: "Apparently there are 59 states....."
+                                                    - statement(Type=BreakStmt): 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "close"
+                                    scope(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "scanner"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "main"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                        - modifier(Type=Modifier): 
+                            keyword: "STATIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "args"
+                            type(Type=ArrayType): 
+                                origin: "TYPE"
+                                componentType(Type=ClassOrInterfaceType): 
+                                    name(Type=SimpleName): 
+                                        identifier: "String"
+                    thrownExceptions: 
+                        - thrownException(Type=ClassOrInterfaceType): 
+                            name(Type=SimpleName): 
+                                identifier: "FileNotFoundException"
+            modifiers: 
+                - modifier(Type=Modifier): 
+                    keyword: "PUBLIC"
+...
