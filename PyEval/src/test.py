@@ -1,3 +1,9 @@
+'''
+Elizabeth Brighton
+Evaluation Assignment (Python)
+test.py
+'''
+
 import os
 
 import FindAST.Find
@@ -5,6 +11,16 @@ import CreateAST.Create
 
 import unittest
 
+
+'''
+TestCases
+This Class is for testing purposes. It uses the python unit
+test version unittest. I thought it would be easier to have
+the find and create tests within the same file so they
+are sectioned off by comments. Before each test the setUp 
+is run which resets both the FindClass and the CreateClass
+regardless of the test
+'''
 class TestCases(unittest.TestCase):
     find = FindAST.Find.FindClass()
     create = CreateAST.Create.CreateClass()
@@ -62,6 +78,15 @@ class TestCases(unittest.TestCase):
         self.create.createAST(filename)
         self.assertTrue(True)
 
+
+
+'''
+Main function
+This function calls the TestCases class by 
+using the python method for calling unit tests,
+unittest.main()
+
+'''
 if __name__ == '__main__':
     unittest.main()
 
