@@ -1,5 +1,7 @@
 # Elizabeth Brighton BaylorIRES2020 Evaluation
-
+Both programs have similar functionality. Each takes a directory path as an argument from the command line and searches through it. 
+The Java portion finds .java files and the Python portion finds .py files. Each creates an Abstract Syntax Tree for the respective 
+file found and saves it to the folder the file was found in under the .ast extension.
 ## Java Portion 
 
 The Java portion consists of 3 packages within the main folder, and 2 packages within the test folder.
