@@ -20,12 +20,12 @@ class CreateClass:
     '''
     def createAST(self, pyName):
         exists = True
-        str = "Temp"
+        
         try:
             # open the file for reading
             f = open(pyName, "r")
             #read the .py file into a string
-            str = f.read()
+            tempStr = f.read()
             
             # create an ASTfile - This is no longer needed
             #ASTfile = ast.parse(str)
@@ -45,11 +45,11 @@ class CreateClass:
             #dump the ASTfile into the file - found an pretty version using pprintast
             #f.write(ast.dump(ASTfile, True, include_attributes=True))
             
-            #direct sys.stdout to the file and print the ast using ppast
+            #direct sys.stdout to the file and print the AST using ppast
             normalOut = sys.stdout
             sys.stdout = f
-            
-            ppast(str)
+            #print the string converted to an AST to the file
+            ppast(tempStr)
             
             #redirect the stdout back to what it was before
             sys.stdout = normalOut

@@ -24,7 +24,7 @@ regardless of the test
 class TestCases(unittest.TestCase):
     find = FindAST.Find.FindClass()
     create = CreateAST.Create.CreateClass()
-
+    
     def setUp(self):
         self.find = FindAST.Find.FindClass()
         self.create = CreateAST.Create.CreateClass()
@@ -33,18 +33,21 @@ class TestCases(unittest.TestCase):
     '''
     FindAST TESTS
     '''
+    #Test a complex directory
     def test_ComplexFile(self):
         dirName = os.path.dirname(__file__)
         filename = os.path.join(dirName, '../static/PythonTestFiles/RegexTest')
         self.find.searchDir(filename)
         self.assertEqual(self.find.returnCount(), 4)
 
+    #Test a directory that does not exist
     def test_FileDoesNotExist(self):
         dirName = os.path.dirname(__file__)
         filename = os.path.join(dirName, '../static/PythonTestFiles/DoesNotExist')
         self.find.searchDir(filename)
         self.assertEqual(self.find.returnCount(), 0)
 
+    #Test a simple directory
     def test_SimpleFile(self):
         dirName = os.path.dirname(__file__)
         filename = os.path.join(dirName, '../static/PythonTestFiles/SimpleTest')
@@ -54,31 +57,42 @@ class TestCases(unittest.TestCase):
     '''
     CreateAST TESTS
     '''
+    #Create a simple AST
     def test_CreateSimpleAST(self):
         dirName = os.path.dirname(__file__)
         filename = os.path.join(dirName, '../static/PythonTestFiles/CreateAST/Main.py')
         self.create.createAST(filename)
         self.assertTrue(True)
-
+        
+    #Create a more complex AST
     def test_CreateComplexAST(self):
         dirName = os.path.dirname(__file__)
         filename = os.path.join(dirName, '../static/PythonTestFiles/CreateAST/Complex.py')
         self.create.createAST(filename)
         self.assertTrue(True)
 
+    #Create an AST from a non existent file
     def test_CreateDoesNotExistAST(self):
         dirName = os.path.dirname(__file__)
         filename = os.path.join(dirName, '../static/PythonTestFiles/CreateAST/DoesNotExist.py')
         self.create.createAST(filename)
         self.assertTrue(True)
 
+    #Create an AST from a blank file.
     def test_CreateBlankAST(self):
         dirName = os.path.dirname(__file__)
         filename = os.path.join(dirName, '../static/PythonTestFiles/CreateAST/Blank.py')
         self.create.createAST(filename)
         self.assertTrue(True)
 
-
+    #Create an AST from a non .py file
+    #If given a bad file it simply treats it as
+    #a blank file and creates a basic .ast for it
+    def test_CreateNonAST(self):
+        dirName = os.path.dirname(__file__)
+        filename = os.path.join(dirName, '../static/PythonTestFiles/CreateAST/NotPy.py2')
+        self.create.createAST(filename)
+        self.assertTrue(True)
 
 '''
 Main function

@@ -40,7 +40,7 @@ class FindClass:
             for file in files:
                 if file.endswith(".py"):
                     self.count = self.count + 1
-                    #print(os.path.join(root, file))
+                    
                     self.create.createAST(os.path.join(root, file))
         if not exists:
             print("No Directory found")
